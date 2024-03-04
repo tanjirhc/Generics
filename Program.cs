@@ -10,10 +10,10 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            bool Result = Calculator.Com<string>("AS","AS");
+            bool Result = Calculator.Com<int>(1,1);
             if(Result)
             {
-                Console.WriteLine("Vale Match");
+                Console.WriteLine("Value Match");
             }
             else { 
                 Console.WriteLine("Value not matched");
