@@ -10,13 +10,13 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            bool Result = Calculator.Equal("AB","AB");
+            bool Result = Calculator.Com<string>("AS","AS");
             if(Result)
             {
                 Console.WriteLine("Vale Match");
             }
             else { 
-                Console.WriteLine("Value not matche");
+                Console.WriteLine("Value not matched");
             }
             Console.ReadLine();
         }
@@ -24,9 +24,9 @@ namespace Generics
 
     public class Calculator
     {
-        public static bool Equal(string value1, string value2)
+        public static bool Com<T>(T value1, T value2)
         {
-            return value1 == value2;
+            return value1.Equals(value2);
         }
     }
 }
