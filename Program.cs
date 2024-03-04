@@ -10,7 +10,7 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            bool Result = Calculator.Com<int>(1,1);
+            bool Result = Calculator<int>.Com(1,1);
             if(Result)
             {
                 Console.WriteLine("Value Match");
@@ -22,9 +22,9 @@ namespace Generics
         }
     }
 
-    public class Calculator
+    public class Calculator<T>
     {
-        public static bool Com<T>(T value1, T value2)
+        public static bool Com(T value1, T value2)
         {
             return value1.Equals(value2);
         }
